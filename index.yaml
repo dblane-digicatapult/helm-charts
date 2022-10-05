@@ -2,100 +2,131 @@ apiVersion: v1
 entries:
   common:
   - apiVersion: v2
-    created: "2022-08-04T23:20:40.091399517Z"
+    created: "2022-10-05T12:53:38.351262569Z"
     description: A generic helm chart for Kubernetes
-    digest: 32a88d5609c929d0f4b0e5a53ade1f778832c3383388972a36cdb48dc789c481
+    digest: 9c657afab6df3a19fdbd96321249aa5f4193b577666ca476a7cf139e2697c26c
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
     name: common
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/common-0.4.0/common-0.4.0.tgz
-    version: 0.4.0
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/common-0.6.3/common-0.6.3.tgz
+    version: 0.6.3
   node:
   - apiVersion: v2
-    created: "2022-08-04T23:20:40.245305136Z"
+    created: "2022-10-05T12:53:38.499332297Z"
     description: A Helm chart to deploy Substrate/Polkadot nodes
-    digest: 7bb691deea37377d56dc63f7edeb9291d05baa8b04cccca0bd77bccd538dc14c
+    digest: 4b89d252259800017e682e2fe68db6d38742bd432c747bcf011bacb9a25f66db
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
     name: node
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/node-2.11.3/node-2.11.3.tgz
-    version: 2.11.3
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/node-4.0.0/node-4.0.0.tgz
+    version: 4.0.0
+  polkadot-basic-notification:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-10-05T12:53:38.646870319Z"
+    description: A Helm chart for Kubernetes
+    digest: 07791cea936a21bce8809cc8aade1cc80552c9e9715bc90194f5cb70b3cb0e3a
+    maintainers:
+    - name: Parity
+      url: https://github.com/paritytech/helm-charts
+    name: polkadot-basic-notification
+    type: application
+    urls:
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/polkadot-basic-notification-1.0.1/polkadot-basic-notification-1.0.1.tgz
+    version: 1.0.1
   polkadot-introspector:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-08-04T23:20:40.371592178Z"
+    created: "2022-10-05T12:53:38.773332181Z"
     description: A Helm chart to deploy polkadot-introspector
-    digest: 089f93bad65c93b0dca1303ff77f3613dbf6a20665c4b7263e3f278f88c4c796
+    digest: aefc0a3866f8472ddc545f6b7d0e7a30aed14b64dcc1287b492fb08ac78d8f42
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
     name: polkadot-introspector
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/polkadot-introspector-0.1.1/polkadot-introspector-0.1.1.tgz
-    version: 0.1.1
-  polkadot-notification-service:
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/polkadot-introspector-0.1.2/polkadot-introspector-0.1.2.tgz
+    version: 0.1.2
+  polkadot-runtime-exporter:
   - apiVersion: v2
-    appVersion: 0.1.0
-    created: "2022-08-04T23:20:40.532056568Z"
-    description: A Helm chart for Kubernetes
-    digest: 40ae88ab3a1c65a42cb42c56b9cfe54c3e9467e0fb82e6bcde41940b22d1bf66
+    created: "2022-10-05T12:53:38.90036665Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.14.1
+    description: A Helm chart to deploy runtime exporter (https://github.com/paritytech/polkadot-runtime-prom-exporter)
+    digest: 8ba54e38f475e1de890a3f92c37f87bacfb5eb4ea649f1c82d377e7296dc64b0
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
-    name: polkadot-notification-service
+    name: polkadot-runtime-exporter
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/polkadot-notification-service-0.2.0/polkadot-notification-service-0.2.0.tgz
-    version: 0.2.0
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/polkadot-runtime-exporter-1.1.1/polkadot-runtime-exporter-1.1.1.tgz
+    version: 1.1.1
   staking-miner:
   - apiVersion: v2
-    created: "2022-08-04T23:20:40.651506739Z"
+    created: "2022-10-05T12:53:39.053142136Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
       version: 1.14.1
     description: A Helm chart to deploy staking miner (https://github.com/paritytech/staking-miner)
-    digest: 924ff6574d2b7ad8f764e0ffb6e8b253fb0db5a8c6e1f4ce515be9c7bee8f2b7
+    digest: a76514014a7f212bcd125c7e78db3cbb7b71fd236a7b984198c9efba27fa0dbe
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
     name: staking-miner
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/staking-miner-1.2.0/staking-miner-1.2.0.tgz
-    version: 1.2.0
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/staking-miner-1.3.2/staking-miner-1.3.2.tgz
+    version: 1.3.2
   substrate-faucet:
   - apiVersion: v2
-    created: "2022-08-04T23:20:40.754474383Z"
+    created: "2022-10-05T12:53:39.181652123Z"
     description: A Helm chart to deploy substrate-faucet
-    digest: b96fc76e97a80a64c89b900aeba36856c67ae0b255eee2247a705d8214461a25
+    digest: c6d7b54e29813d28dab5e197f6a9da8b05d5df00bf065150ca6be8d3f2e5ea8a
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
     name: substrate-faucet
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/substrate-faucet-1.0.1/substrate-faucet-1.0.1.tgz
-    version: 1.0.1
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/substrate-faucet-1.2.1/substrate-faucet-1.2.1.tgz
+    version: 1.2.1
   substrate-telemetry:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-08-04T23:20:40.873481257Z"
+    created: "2022-10-05T12:53:39.299974784Z"
     description: A Helm chart for substrate-telemetry
-    digest: 0da8a0d9f003c4428a35085258a616fea1f31bf831cba8d93fb4221e05c3049b
+    digest: db197c710baf99c0d92f92b5738450478ac14b86467162bddf631223e8217e2b
     maintainers:
     - name: Parity
       url: https://github.com/paritytech/helm-charts
     name: substrate-telemetry
     type: application
     urls:
-    - https://github.com/dblane-digicatapult/helm-charts/releases/download/substrate-telemetry-2.1.2/substrate-telemetry-2.1.2.tgz
-    version: 2.1.2
-generated: "2022-08-04T23:20:40.873486257Z"
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/substrate-telemetry-2.2.0/substrate-telemetry-2.2.0.tgz
+    version: 2.2.0
+  testnet-manager:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-10-05T12:53:39.418881652Z"
+    description: A Helm chart to deploy testnet-manager
+    digest: 0acb7d2fad8ebeebeee8c910f6ef51da54c35c8b51d80be9b73a1910b0f2a5e1
+    maintainers:
+    - name: Parity
+      url: https://github.com/paritytech/helm-charts
+    name: testnet-manager
+    type: application
+    urls:
+    - https://github.com/dblane-digicatapult/helm-charts/releases/download/testnet-manager-1.1.1/testnet-manager-1.1.1.tgz
+    version: 1.1.1
+generated: "2022-10-05T12:53:39.418901353Z"
